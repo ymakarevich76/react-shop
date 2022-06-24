@@ -84,7 +84,9 @@ function Shop() {
             }
         });
 
-        setOrder(newOrder);
+        const newArray = newOrder.filter(item => item.quantity !== 0)
+
+        setOrder(newArray);
     };
 
     const closeAlert = () => {
